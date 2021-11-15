@@ -6,7 +6,7 @@
     "start": "node ./bin/www",
     "start:dev": "nodemon ./bin/www",
     "test:jest": "jest",
-    "test:cypress": "./node_modules/.bin/cypress run"
+    "test:cypress": "./node_modules/.bin/cypress run --headless"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
