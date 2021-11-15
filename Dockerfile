@@ -1,6 +1,6 @@
 FROM node:14-alpine as base
 WORKDIR /src
-COPY package*.json .
+COPY package*.json ./
 EXPOSE 3000
 
 #  FROM base as production
@@ -18,7 +18,7 @@ EXPOSE 3000
 FROM base as tests
 #ENV NODE_ENV=production
 RUN  npm i
-COPY . .
+COPY . ./
 CMD [ "npm" , "run", "test:jest" ]
 
 
