@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node ./bin/www",
     "start:dev": "nodemon ./bin/www",
-    "test:jest": "jest"
+    "test:jest": "jest",
+    "test:cypress": "export NODE_OPTIONS=--openssl-legacy-provider && ./node_modules/.bin/cypress run"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
