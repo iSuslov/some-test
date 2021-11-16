@@ -1,13 +1,24 @@
 steps:
-  - name: gcr.io/cloud-builders/docker
+  - name: gcr.io/cloud-builders/npm
     args:
-      - build
-      - '-t'
-      - 'gcr.io/${PROJECT_ID}/health_shared:latest_build'
-      - '-f'
-      - ./Dockerfile
-      - ./
-  - name: gcr.io/cloud-builders/docker
+      - install
+    id: Install dependencies
+  - name: gcr.io/cloud-builders/npm
     args:
-      - push
-      - 'gcr.io/${PROJECT_ID}/health_shared:latest_build'
+      - run
+      - 'test:jest'
+    id: Jest tests
+  - name: 'docker/compose:1.29.2'
+    args:
+      - up
+      - '-d'
+    id: Run production
+#  - name: 'cypress/included:9.0.0'
+#    args:
+#      - run
+#    id: Run Cypress tests
+  - name: 'gcr.io/cloud-builders/npm'
+    args:
+      - run
+      - test:cypress
+    id: Run Cypress tests

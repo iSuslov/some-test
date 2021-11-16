@@ -5,11 +5,16 @@ services:
       context: '.'
       target: production
     volumes: 
-      - .:/src
+#      - ./:/src
+      - /Users/zuzel/Projects/nodejs-docker-express:/src
     ports: 
       - "3000:3000"
     environment:
       NODE_ENV: production
+networks:
+  default:
+    external:
+      name: cloudbuild
       
 
     

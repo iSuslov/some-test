@@ -13,7 +13,7 @@ CMD [ "node", "bin/www" ]
 FROM base as dev
 ENV NODE_ENV=development
 RUN npm install -g nodemon && npm install
-COPY . /
+COPY . ./
 CMD [ "nodemon", 'bin/www' ]
 
 FROM base as tests
