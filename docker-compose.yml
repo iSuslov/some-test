@@ -5,8 +5,8 @@ services:
       context: '.'
       target: production
     volumes: 
-#      - ./:/src
-      - /Users/zuzel/Projects/nodejs-docker-express:/src
+      - ./:/src
+#      - /Users/zuzel/Projects/nodejs-docker-express:/src
     ports: 
       - "3000:3000"
     environment:
