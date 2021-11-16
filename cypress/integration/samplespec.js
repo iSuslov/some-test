@@ -9,5 +9,7 @@ describe('My First Test', () => {
       /* ==== Generated with Cypress Studio ==== */
       cy.get('h1').should('have.text', 'Express with Docker! Hello Ivan!');
       /* ==== End Cypress Studio ==== */
+
+      cy.get('span').should('have.text', 'production');
     })
   })
