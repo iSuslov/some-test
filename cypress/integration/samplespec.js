@@ -10,6 +10,6 @@ describe('My First Test', () => {
       cy.get('h1').should('have.text', 'Express with Docker! Hello Ivan!');
       /* ==== End Cypress Studio ==== */
 
-      cy.get('span').should('have.text', 'production');
+      cy.get('span').should('contain.text', 'production');
     })
   })
