@@ -16,7 +16,7 @@ services:
     depends_on:
       - "web"
     volumes: 
-      - ./:/
+      - ./cypress:/cypress
 
       
 
