@@ -21,4 +21,9 @@ ENV NODE_ENV=production
 COPY . ./
 CMD [ "npm" , "run", "test:jest" ]
 
+FROM base as cy
+ENV NODE_ENV=production
+COPY . ./
+CMD [ "npm" , "run", "test:jest" ]
+
 
