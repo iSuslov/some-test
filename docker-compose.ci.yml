@@ -11,7 +11,7 @@ services:
       - "3001:3000"
     environment:
       NODE_ENV: dev
-  cypress:
+  cypress: 
     image: 'cypress/included:9.0.0'
     depends_on:
       - "web"
