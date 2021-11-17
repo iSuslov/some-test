@@ -15,8 +15,9 @@ services:
     image: 'cypress/included:9.0.0'
     depends_on:
       - "web"
+    working_dir: /e2e
     volumes: 
-      - ./cypress:/cypress
+      - ./:/e2e
 
       
 
