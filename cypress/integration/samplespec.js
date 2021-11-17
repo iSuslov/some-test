@@ -1,7 +1,7 @@
 
 describe('My First Test', () => {
     it('Visits the Kitchen Sink', () => {
-      cy.visit('aspojdjopasdjop/')
+      cy.visit('/')
       /* ==== Generated with Cypress Studio ==== */
       cy.wait(500);
       cy.get('p').should('have.text', 'Welcome to Express with Docker! Hello Ivan!');

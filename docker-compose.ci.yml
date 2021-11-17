@@ -18,6 +18,8 @@ services:
     working_dir: /e2e
     volumes: 
       - ./:/e2e
+    environment:
+      CYPRESS_BASE_URL: http://workspace_web_1:3000
 
       
 
