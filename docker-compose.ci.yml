@@ -10,7 +10,7 @@ services:
     ports: 
       - "3001:3000"
     environment:
-      NODE_ENV: dev
+      NODE_ENV: production
   cypress: 
     image: 'cypress/included:9.0.0'
     depends_on:
